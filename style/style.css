@@ -1,0 +1,69 @@
+@keyframes roll1 {
+    from {
+        background-position-y: 0vh;
+    } to {
+        background-position-y: -20vh;
+    }
+}
+
+@keyframes roll2 {
+    from {
+        background-position-y: 0vh;
+    } to {
+        background-position-y: -20vh;
+    }
+}
+
+@keyframes roll3 {
+    from {
+        background-position-y: 0vh;
+    } to {
+        background-position-y: -20vh;
+    }
+}
+
+
+body{
+    background-image: url(../imgs/1.png);
+    background-size: auto 120vh;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+svg {
+    margin: auto;
+    display: block;
+  }
+  
+  path {
+    stroke-width: 6;
+  }
+
+  path.blue {
+    stroke:white;
+    stroke-dasharray: 454;
+  }
+
+  #progresso {
+    mask: url(#mask);
+    width: 50vw;
+    stroke-dashoffset: 454;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    filter: drop-shadow( 0px 0px 4px rgba(0, 0, 0, 0.7));
+    transition: all 1s ease-in-out;
+  }
+
+#timer {
+    font-size: 4vw;
+    color: white;
+    font-family: monospace;
+    position: fixed;
+    left: 50%;
+    top: calc(50% + 6.5vw);
+    filter: drop-shadow( 0px 0px 4px rgba(0, 0, 0, 0.7));
+    transform: translate(-50%,-50%);
+}
