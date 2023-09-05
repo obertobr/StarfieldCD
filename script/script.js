@@ -16,7 +16,11 @@ setInterval(() => {
 
 setInterval(() => {
     contagem = lancamento*1000 - Date.now()
-    let data = new Date(contagem);
-    progresso.style = `stroke-dashoffset: ${contagem/2419200000*454};`
-    timer.innerText = `${data.getDate()}:${pad(data.getHours())}:${pad(data.getMinutes())}:${pad(data.getSeconds())}`
+    if(contagem <= 0){
+        timer.innerText = "LANÇOU!!!"
+    } else {
+        let data = new Date(contagem);
+        progresso.style = `stroke-dashoffset: ${contagem/2419200000*454};`
+        timer.innerText = `${data.getDate()}:${pad(data.getHours())}:${pad(data.getMinutes())}:${pad(data.getSeconds())}`
+    }
 },1000)
